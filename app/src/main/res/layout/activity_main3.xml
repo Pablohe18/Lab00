@@ -7,9 +7,9 @@
     tools:context=".Main2Activity">
 
     <ListView
-        android:id="@+id/Listashow"
+        android:id="@+id/txtSalida"
         android:layout_width="match_parent"
-        android:layout_height="471dp"
+        android:layout_height="434dp"
         android:layout_marginBottom="8dp"
         android:footerDividersEnabled="false"
         android:headerDividersEnabled="true"
@@ -17,24 +17,24 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="8dp" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="280dp"
-        android:layout_height="31dp"
-        android:text="coloca tus canciones aqui"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints" />
-
     <Button
-        android:id="@+id/BOAGR"
+        android:id="@+id/btnNombre"
         android:layout_width="wrap_content"
         android:layout_height="36dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
+        android:onClick=""
         android:text="Agregar"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="283dp"
         tools:ignore="MissingConstraints"
-        android:onClick=""/>
+        tools:layout_editor_absoluteX="269dp" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="4dp" />
 
 </android.support.constraint.ConstraintLayout>
