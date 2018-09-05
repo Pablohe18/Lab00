@@ -23,8 +23,8 @@ public class Main2Activity extends AppCompatActivity {
     private EditText et_buscador;
     private EditText txtAgregar;
     private Button btnAgregar;
-    ArrayAdapter<String> adapter;
-    int counter = 0;
+    private ArrayAdapter<String> adapter;
+    private int counter = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
