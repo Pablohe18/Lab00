@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnAgregar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Main2Activity">
@@ -9,7 +10,7 @@
     <ListView
         android:id="@+id/lista"
         android:layout_width="match_parent"
-        android:layout_height="404dp"
+        android:layout_height="368dp"
         android:layout_marginBottom="8dp"
         android:footerDividersEnabled="false"
         android:headerDividersEnabled="true"
@@ -21,20 +22,31 @@
         android:id="@+id/btnAgregar"
         android:layout_width="wrap_content"
         android:layout_height="36dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="76dp"
         android:onClick=""
         android:text="Agregar"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="280dp" />
+        tools:layout_editor_absoluteX="256dp" />
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:onClick=""
+        android:text="Buscar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="256dp" />
 
     <EditText
         android:id="@+id/txtNombre"
-        android:layout_width="253dp"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="16dp" />
 
 </android.support.constraint.ConstraintLayout>
