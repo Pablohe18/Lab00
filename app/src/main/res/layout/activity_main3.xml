@@ -7,9 +7,9 @@
     tools:context=".Main2Activity">
 
     <ListView
-        android:id="@+id/txtSalida"
+        android:id="@+id/lista"
         android:layout_width="match_parent"
-        android:layout_height="434dp"
+        android:layout_height="404dp"
         android:layout_marginBottom="8dp"
         android:footerDividersEnabled="false"
         android:headerDividersEnabled="true"
@@ -18,23 +18,23 @@
         tools:layout_editor_absoluteX="8dp" />
 
     <Button
-        android:id="@+id/btnNombre"
+        android:id="@+id/btnAgregar"
         android:layout_width="wrap_content"
         android:layout_height="36dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:onClick=""
         android:text="Agregar"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="269dp" />
+        tools:layout_editor_absoluteX="280dp" />
 
     <EditText
         android:id="@+id/txtNombre"
-        android:layout_width="243dp"
+        android:layout_width="253dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="4dp" />
+        tools:layout_editor_absoluteY="16dp" />
 
 </android.support.constraint.ConstraintLayout>

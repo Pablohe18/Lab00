@@ -1,6 +1,7 @@
 package com.example.pabloherrera.lab0ed2;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,33 +17,30 @@ import java.util.List;
 import static android.R.layout.simple_list_item_1;
 
 public class Main2Activity extends AppCompatActivity {
-    private EditText Micaja;
-    private ListView Misalida;
-    private Button BotonMostrar;
-    private ArrayAdapter<String> adaptador1;
-    private ArrayList<String> lista;
 
-    @SuppressLint("WrongViewCast")
+
+    private ListView lista;
+    List<String> items;
+    ArrayAdapter ADP;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        lista=new ArrayList<String>();
-        Micaja = (EditText) findViewById(R.id.txtNombre);
-        Misalida = (ListView) findViewById(R.id.txtSalida);
-        BotonMostrar = (Button) findViewById(R.id.btnNombre);
+        final EditText txtNombre = findViewById(R.id.txtNombre);
+        final Button btnAgregar = findViewById(R.id.btnAgregar);
+        lista = findViewById(R.id.lista);
+        items = new ArrayList<>();
+        ADP = new ArrayAdapter(getApplicationContext(),android.R.layout.simple_list_item_1,items);
+        lista.setAdapter(ADP);
 
-        BotonMostrar.setOnClickListener(new View.OnClickListener(){
+        lista.setBackgroundColor(Color.DKGRAY);
+        btnAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                
+            public void onClick(View view) {
+                items.add(txtNombre.getText().toString());
+                ADP.notifyDataSetChanged();
             }
-        
-    }
-
-
-    public void AgregarCancion() {
-
+        });
     }
 }
