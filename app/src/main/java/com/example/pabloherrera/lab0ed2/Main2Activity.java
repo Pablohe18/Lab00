@@ -56,89 +56,18 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void beforeTextChanged(CharSequence s, int i, int i1, int i2) {
 
-                lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-                    @Override
-                    public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        final int posicion1 = i;
-
-                        AlertDialog.Builder dialogo1 = new AlertDialog.Builder(Main2Activity.this);
-                        dialogo1.setTitle("Importante");
-                        dialogo1.setMessage("¿ Elimina este teléfono ?");
-                        dialogo1.setCancelable(false);
-                        dialogo1.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialogo1, int id) {
-                                canciones.remove(posicion1);
-                                adapter.notifyDataSetChanged();
-                            }
-                        });
-                        dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialogo1, int id) {
-                            }
-                        });
-                        dialogo1.show();
-
-                        return false;
-                    }
-                });
+               
             }
 
             @Override
             public void onTextChanged(CharSequence s, int i, int i1, int i2) {
                 adapter.getFilter().filter(s);
 
-                lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-                    @Override
-                    public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        final int posicion1 = i;
-
-                        AlertDialog.Builder dialogo1 = new AlertDialog.Builder(Main2Activity.this);
-                        dialogo1.setTitle("Importante");
-                        dialogo1.setMessage("¿ Elimina este teléfono ?");
-                        dialogo1.setCancelable(false);
-                        dialogo1.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialogo1, int id) {
-                                canciones.remove(posicion1);
-                                adapter.notifyDataSetChanged();
-                            }
-                        });
-                        dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialogo1, int id) {
-                            }
-                        });
-                        dialogo1.show();
-
-                        return false;
-                    }
-                });
 
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-                    @Override
-                    public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        final int posicion1 = i;
-
-                        AlertDialog.Builder dialogo1 = new AlertDialog.Builder(Main2Activity.this);
-                        dialogo1.setTitle("Importante");
-                        dialogo1.setMessage("¿ Elimina este teléfono ?");
-                        dialogo1.setCancelable(false);
-                        dialogo1.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialogo1, int id) {
-                                canciones.remove(posicion1);
-                                adapter.notifyDataSetChanged();
-                            }
-                        });
-                        dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialogo1, int id) {
-                            }
-                        });
-                        dialogo1.show();
-
-                        return false;
-                    }
-                });
 
             }
         });
