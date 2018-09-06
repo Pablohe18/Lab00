@@ -25,12 +25,13 @@ public class Main2Activity extends AppCompatActivity {
     private Button btnAgregar;
     private ArrayAdapter<String> adapter;
     private int counter = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         lista = (ListView) findViewById(R.id.lista);
-        if (counter == 0){
+        if (counter == 0) {
             canciones = new ArrayList<String>();
             canciones.add("Noche Complicada; 3:45");
             canciones.add("Chica paranormal ; 3:41");
@@ -48,7 +49,7 @@ public class Main2Activity extends AppCompatActivity {
             canciones.add("Mani con rocs ; 4:20");
             canciones.add("Tu ; 1:25");
         }
-            counter++;
+        counter++;
         et_buscador = (EditText) findViewById(R.id.et_buscar);
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, canciones);
         lista.setAdapter(adapter);
@@ -56,7 +57,7 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void beforeTextChanged(CharSequence s, int i, int i1, int i2) {
 
-               
+
             }
 
             @Override
@@ -97,8 +98,6 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
     }
-
-
     public void agregar(View v) {
         canciones.add(txtAgregar.getText().toString());
         adapter.notifyDataSetChanged();
